@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.6
+
+
+jar{
+    manifest {
+         attributes 'Implementation-Title': 'Frankies Chat System'
+    }
+}
+
+//repositories {
+//   mavenCentral()
+//}
+
+repositories{
+   maven {
+      url "../../../../../../DevWork/mavenRepo"
+   }
+}
+
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.1'
+}

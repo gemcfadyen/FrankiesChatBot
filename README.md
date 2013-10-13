@@ -26,9 +26,9 @@ To view your local server enter http://localhost:8161/admin/ in your browser log
 
 Building and Running Tests
 --------------------------
-To compile the code type gradle build
-To run the tests type gradle test
-To view test results go to the build/test-results/ and view the generated html files.
+* To compile the code type gradle build
+* To run the tests type gradle test
+* To view test results go to the build/reports/test and view the generated index.html file.
 
 
 

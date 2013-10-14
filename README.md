@@ -16,6 +16,9 @@ Check that the install has been successful by typing gradle -version
 
 If you need to install cywin to use gvm then select ssh, curl and unzip when running the cywing setup.exe
 
+Gradle Wrapper
+--------------
+TODO
 
 ActiveMQ:
 ---------

@@ -3,6 +3,11 @@ FrankiesChatBot
 
 Repository for group project which will simulate a simple chat system
 
+The repo is running against a continuous build server at www.drone.io. The current status can be seen at:
+
+https://drone.io/github.com/gemcfadyen/FrankiesChatBot/status.png
+
+[![Build Status](https://drone.io/github.com/gemcfadyen/FrankiesChatBot/status.png)](https://drone.io/github.com/gemcfadyen/FrankiesChatBot/latest)
 
 Environment setup
 =================

@@ -3,30 +3,23 @@ apply plugin: 'eclipse'
 
 sourceCompatibility = 1.6
 
-
 jar{
-    manifest {
-         attributes 'Implementation-Title': 'Frankies Chat System'
-    }
+	manifest {
+		attributes 'Implementation-Title': 'Frankies Chat System'
+	}
 }
 
 task wrapper(type: Wrapper){
-    gradleVersion = '1.8'
+	gradleVersion = '1.8'
 }
 
 repositories {
-   mavenCentral()
+	mavenCentral()
 }
 
-/*repositories{
-   maven {
-      url "../../../../../../DevWork/mavenRepo"
-   }
-}*/
-
-
-
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.+'
-    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.1'
+	compile 'com.rabbitmq:amqp-client:3.1.4'
+
+	testCompile 'junit:junit:4.+'
+	testCompile 'org.hamcrest:hamcrest-all:1.1'
 }

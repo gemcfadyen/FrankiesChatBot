@@ -1,5 +1,6 @@
 package usecases;
 
+import infra.MessageSender;
 import infra.MessageService;
 
 import java.util.ArrayList;
@@ -10,11 +11,10 @@ import domain.Status;
 public class UserPublishesToChatRoom {
 	private List<String> roomsList = new ArrayList<String>();
 	private MessageService messageService;
+	private MessageSender messageSender;
 	
 	public Status invoke(String chatRoom, String message) {
-		return isValid(chatRoom) && messageService.isValid(message) 
-				? Status.SUCCESS 
-				: Status.FAIL;
+		return isValid(chatRoom) && messageService.isValid(message) ? messageSender.publish(message) : Status.FAIL;
 	}
 
 	private boolean isValid(String chatRoom) {
@@ -30,5 +30,9 @@ public class UserPublishesToChatRoom {
 	
 	public void setMessageService(MessageService messageService) {
 		this.messageService = messageService;
+	}
+	
+	public void setMessageSender(MessageSender messageSender) {
+		this.messageSender = messageSender;
 	}
 }

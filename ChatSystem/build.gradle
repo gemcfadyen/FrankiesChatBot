@@ -22,4 +22,5 @@ dependencies {
 
 	testCompile 'junit:junit:4.+'
 	testCompile 'org.hamcrest:hamcrest-all:1.1'
+	testCompile 'org.mockito:mockito-all:1.8.5'
 }

@@ -5,6 +5,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.rabbitmq.client.Channel;
@@ -24,6 +25,7 @@ public class HelloWorldTest {
 		channel = connection.createChannel();
 	}
 
+	@Ignore
 	@Test
 	public void consumes_hello_world_message_from_queue() throws Exception {
 		publishMessageToQueue(MESSAGE, QUEUE);

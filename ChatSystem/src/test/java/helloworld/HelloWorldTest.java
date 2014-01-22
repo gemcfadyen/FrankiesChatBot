@@ -48,7 +48,7 @@ public class HelloWorldTest {
 
 	private ConnectionFactory initialiseConnectionFactory() {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		connectionFactory.setHost("dev.rabbitmq.com");
+		connectionFactory.setHost("ec2-54-202-194-91.us-west-2.compute.amazonaws.com");
 		connectionFactory.setPort(5672);
 		connectionFactory.setUsername("guest");
 		connectionFactory.setPassword("guest");
